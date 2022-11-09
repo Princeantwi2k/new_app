@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:new_app/backgroud.dart';
 
 class DashboadPage extends StatelessWidget {
   const DashboadPage({super.key});
@@ -9,11 +10,12 @@ class DashboadPage extends StatelessWidget {
     const int itemCount = 10;
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        bottomNavigationBar: NavigationBar(destinations: [
+        bottomNavigationBar:
+            NavigationBar(backgroundColor: Colors.white, destinations: [
           NavigationDestination(icon: Icon(Icons.home), label: "Home"),
           NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Person"),
+          NavigationDestination(icon: Icon(Icons.search), label: "search"),
+          NavigationDestination(icon: Icon(Icons.shopping_cart), label: "cart"),
         ]),
         body: SingleChildScrollView(
           child: SafeArea(
@@ -264,7 +266,27 @@ class DashboadPage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 250.0),
+              child: Text(
+                "Item Category",
+                style: TextStyle(),
+              ),
+            ),
+            // Container(
+            //   child: ListView.builder(
+            //       itemBuilder: (BuildContext context, int index) {
+            //     return ListTile(
+            //       title: Text('Item${(index + 1)}'),
+            //     );
+            //   }),
+            // )
           ])),
         ));
   }
 }
+
+const int itemCount = 10;
