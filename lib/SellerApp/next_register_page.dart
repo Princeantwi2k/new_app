@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/SellerApp/next_register_page.dart';
+import 'package:new_app/SellerApp/terms_page.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({super.key});
+class NextRegisterPage extends StatelessWidget {
+  const NextRegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 247, 252),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        backgroundColor: Color.fromARGB(255, 238, 247, 252),
+        body: SingleChildScrollView(
+            child: SafeArea(
+                child: Center(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
               //Hello again
               Image.asset(
                 'assets/piclogo.png',
@@ -36,9 +37,8 @@ class RegisterPage extends StatelessWidget {
                         TextStyle(fontWeight: FontWeight.normal, fontSize: 17)),
               ),
               SizedBox(
-                height: 25,
+                height: 40,
               ),
-              //email testfild
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 25.0,
@@ -54,99 +54,7 @@ class RegisterPage extends StatelessWidget {
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Enter first name",
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Enter your last name",
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              //password testfild
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Email address",
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              //password testfild
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Business name",
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              //password testfild
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: Padding(
-                    padding:
-                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Select business type",
+                        hintText: "Enter Password",
                       ),
                     ),
                   ),
@@ -155,13 +63,37 @@ class RegisterPage extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              //sign in button
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Confirm password",
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) => NextRegisterPage()));
+                        builder: (BuildContext context) =>
+                            TermsAndConditionPage()));
                   },
                   child: Container(
                       padding: EdgeInsets.all(20),
@@ -170,7 +102,7 @@ class RegisterPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: Center(
                           child: Text(
-                        "Confirm",
+                        "Complete",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -179,11 +111,8 @@ class RegisterPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 80,
               ),
-
-              //not a member? register now
-
               Padding(
                 padding: const EdgeInsets.only(left: 90),
                 child: Row(
@@ -203,10 +132,6 @@ class RegisterPage extends StatelessWidget {
                   ],
                 ),
               )
-            ]),
-          ),
-        ),
-      ),
-    );
+            ])))));
   }
 }

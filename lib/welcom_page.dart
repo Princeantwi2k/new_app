@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import "Index_page.dart";
+import 'Buyer App/Index_page.dart';
 import 'package:country_picker/country_picker.dart';
 
 class WelcomePage extends StatelessWidget {

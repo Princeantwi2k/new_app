@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/dashboad_page.dart';
+import 'package:new_app/Buyer%20App/dashboad_page.dart';
 
 class OptPage extends StatelessWidget {
   const OptPage({super.key});

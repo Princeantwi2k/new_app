@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/SellerApp/seller_index_page.dart';
-import "../Index_page.dart";
+import '../Buyer App/Index_page.dart';
 import 'package:country_picker/country_picker.dart';
 
 class SellerWelcomePage extends StatelessWidget {

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/backgroud.dart';
-import "login_page.dart";
-import 'backgroud.dart';
-import "register_page.dart";
+import 'package:new_app/Buyer%20App/backgroud.dart';
+import '../login_page.dart';
+import '../register_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({super.key});

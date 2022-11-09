@@ -1,6 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:new_app/backgroud.dart';
 
 class DashboadPage extends StatelessWidget {
   const DashboadPage({super.key});

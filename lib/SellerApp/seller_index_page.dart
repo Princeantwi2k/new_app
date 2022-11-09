@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/SellerApp/seller_backgroud.dart';
-import 'package:new_app/backgroud.dart';
 import 'package:new_app/login_page.dart';
 import 'package:new_app/register_page.dart';
 
