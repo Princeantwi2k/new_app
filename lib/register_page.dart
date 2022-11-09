@@ -6,36 +6,54 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 176, 177, 172),
-        body: SafeArea(
+      backgroundColor: Color.fromARGB(255, 238, 247, 252),
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Center(
             child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
               //Hello again
-              Text("Register here",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 34)),
-              SizedBox(
-                height: 50,
+              Image.asset(
+                'assets/piclogo.png',
+                width: 200,
+                height: 150,
+                fit: BoxFit.cover,
               ),
-              Text("fill in your details",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+              Padding(
+                padding: const EdgeInsets.only(right: 200.0),
+                child: Text("Create Account",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 200.0),
+                child: Text("Sign up to get started",
+                    style:
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 17)),
+              ),
               SizedBox(
                 height: 25,
               ),
               //email testfild
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.white,
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12)),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Name",
+                        hintText: "Enter first name",
                       ),
                     ),
                   ),
@@ -48,15 +66,16 @@ class RegisterPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.white,
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12)),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Email",
+                        hintText: "Enter your last name",
                       ),
                     ),
                   ),
@@ -70,16 +89,16 @@ class RegisterPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.grey[200],
+                      color: Colors.white,
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(12)),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Password",
+                        hintText: "Email address",
                       ),
                     ),
                   ),
@@ -88,13 +107,60 @@ class RegisterPage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
+              //password testfild
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Business name",
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              //password testfild
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Select business type",
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
               //sign in button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: Colors.green,
+                        color: Color.fromARGB(255, 148, 203, 219),
                         borderRadius: BorderRadius.circular(12)),
                     child: Center(
                         child: Text(
@@ -106,24 +172,23 @@ class RegisterPage extends StatelessWidget {
                     ))),
               ),
               SizedBox(
-                height: 10,
+                height: 15,
               ),
 
               //not a member? register now
 
               Padding(
-                padding: const EdgeInsets.only(left: 180),
+                padding: const EdgeInsets.only(left: 90),
                 child: Row(
                   children: [
-                    Text("I'am member? ",
+                    Text("Already have an account? ",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         )),
                     GestureDetector(
-                      child: Text("login!",
+                      child: Text("Sign!",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 40, 43, 198))),
+                              fontWeight: FontWeight.bold, color: Colors.red)),
                       onTap: () {
                         Navigator.pop(context);
                       },
@@ -133,6 +198,8 @@ class RegisterPage extends StatelessWidget {
               )
             ]),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
