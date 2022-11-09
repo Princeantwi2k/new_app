@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_app/SellerApp/seller_backgroud.dart';
-import 'package:new_app/login_page.dart';
-import 'package:new_app/register_page.dart';
+import 'package:new_app/SellerApp/seller_login_page.dart';
+import 'package:new_app/Buyer%20App/register_page.dart';
 
 class SellerIndexPage extends StatelessWidget {
   const SellerIndexPage({super.key});
@@ -9,7 +9,7 @@ class SellerIndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      SellerBackground(),
+      const SellerBackground(),
       Scaffold(
           backgroundColor: Colors.transparent,
           body: SafeArea(
@@ -33,32 +33,32 @@ class SellerIndexPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
 
-                    Text("Sellers App",
+                    const Text("Sellers App",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
                             color: Colors.white)),
-                    SizedBox(
+                    const SizedBox(
                       height: 100,
                     ),
-                    Text("Live Auction",
+                    const Text("Live Auction",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 17,
                             color: Colors.white)),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
-                    Text("Search,buy and buy with the tap of you finger",
+                    const Text("Search,buy and buy with the tap of you finger",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 13,
                             color: Colors.white)),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     //email testfild
@@ -70,15 +70,16 @@ class SellerIndexPage extends StatelessWidget {
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (BuildContext context) => LoginPage()));
+                              builder: (BuildContext context) =>
+                                  const SellersLoginPage()));
                         },
                         child: Container(
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
                                 color: Colors.transparent,
                                 border: Border.all(color: Colors.white),
                                 borderRadius: BorderRadius.circular(12)),
-                            child: Center(
+                            child: const Center(
                                 child: Text(
                               "Sign In",
                               style: TextStyle(
@@ -88,7 +89,7 @@ class SellerIndexPage extends StatelessWidget {
                             ))),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     Padding(
@@ -97,14 +98,14 @@ class SellerIndexPage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  RegisterPage()));
+                                  const RegisterPage()));
                         },
                         child: Container(
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             decoration: BoxDecoration(
                                 color: Colors.orange,
                                 borderRadius: BorderRadius.circular(12)),
-                            child: Center(
+                            child: const Center(
                                 child: Text(
                               "Sign Up",
                               style: TextStyle(
@@ -114,7 +115,7 @@ class SellerIndexPage extends StatelessWidget {
                             ))),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
 
@@ -123,8 +124,9 @@ class SellerIndexPage extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 150),
                       child: Row(
+                        // ignore: prefer_const_literals_to_create_immutables
                         children: [
-                          Text("Enter on Vistor ",
+                          const Text("Enter on Vistor ",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,

@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/SellerApp/terms_page.dart';
+import 'package:new_app/Buyer%20App/buyer_terms_page.dart';
 
-class NextRegisterPage extends StatelessWidget {
-  const NextRegisterPage({super.key});
+class ConfirmAccount extends StatelessWidget {
+  const ConfirmAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 238, 247, 252),
-        body: SingleChildScrollView(
-            child: SafeArea(
-                child: Center(
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
+      backgroundColor: const Color.fromARGB(255, 238, 247, 252),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Center(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
               //Hello again
               Image.asset(
                 'assets/piclogo.png',
@@ -37,12 +36,13 @@ class NextRegisterPage extends StatelessWidget {
                         TextStyle(fontWeight: FontWeight.normal, fontSize: 17)),
               ),
               const SizedBox(
-                height: 40,
+                height: 45,
               ),
+              //email testfild
+
+              //password testfild
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 25.0,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -51,22 +51,20 @@ class NextRegisterPage extends StatelessWidget {
                   child: const Padding(
                     padding: EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Enter Password",
+                        hintText: " Enter password",
                       ),
                     ),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
+              //password testfild
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 25.0,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -75,10 +73,9 @@ class NextRegisterPage extends StatelessWidget {
                   child: const Padding(
                     padding: EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Confirm password",
+                        hintText: "confirm password",
                       ),
                     ),
                   ),
@@ -87,13 +84,16 @@ class NextRegisterPage extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
+              //password testfild
+
+              //sign in button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const TermsAndConditionPage()));
+                            const BuyerTermsAndConditionPage()));
                   },
                   child: Container(
                       padding: const EdgeInsets.all(20),
@@ -102,7 +102,7 @@ class NextRegisterPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: const Center(
                           child: Text(
-                        "Complete",
+                        "Continue",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -111,8 +111,11 @@ class NextRegisterPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 80,
+                height: 75,
               ),
+
+              //not a member? register now
+
               Padding(
                 padding: const EdgeInsets.only(left: 90),
                 child: Row(
@@ -132,6 +135,10 @@ class NextRegisterPage extends StatelessWidget {
                   ],
                 ),
               )
-            ])))));
+            ]),
+          ),
+        ),
+      ),
+    );
   }
 }

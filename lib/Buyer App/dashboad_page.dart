@@ -6,15 +6,18 @@ class DashboadPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const int itemCount = 10;
     return Scaffold(
         backgroundColor: Colors.grey[200],
         bottomNavigationBar:
+            // ignore: prefer_const_literals_to_create_immutables
             NavigationBar(backgroundColor: Colors.white, destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-          NavigationDestination(icon: Icon(Icons.search), label: "search"),
-          NavigationDestination(icon: Icon(Icons.shopping_cart), label: "cart"),
+          const NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          const NavigationDestination(
+              icon: Icon(Icons.person), label: "Person"),
+          const NavigationDestination(
+              icon: Icon(Icons.search), label: "search"),
+          const NavigationDestination(
+              icon: Icon(Icons.shopping_cart), label: "cart"),
         ]),
         body: SingleChildScrollView(
           child: SafeArea(
@@ -22,7 +25,7 @@ class DashboadPage extends StatelessWidget {
                   Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                     backgroundImage: AssetImage(
                       'assets/profile.jpg',
                     ),
@@ -34,19 +37,19 @@ class DashboadPage extends StatelessWidget {
                     children: [
                       Container(
                         padding: const EdgeInsets.only(right: 80),
-                        child: Text("Hello",
+                        child: const Text("Hello",
                             style: TextStyle(
                                 fontWeight: FontWeight.normal, fontSize: 15)),
                       ),
-                      Text("Ann Onwuegbuchi",
+                      const Text("Ann Onwuegbuchi",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(15.0),
-                  margin: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(15.0),
+                  margin: const EdgeInsets.all(20.0),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12)),
@@ -56,12 +59,10 @@ class DashboadPage extends StatelessWidget {
                     height: 20,
                   ),
                 ),
-                Container(
-                  child: Image.asset(
-                    'assets/Group 402.png',
-                    width: 20,
-                    height: 100,
-                  ),
+                Image.asset(
+                  'assets/Group 402.png',
+                  width: 20,
+                  height: 100,
                 ),
               ],
             ),
@@ -84,15 +85,15 @@ class DashboadPage extends StatelessWidget {
                 });
               }).toList(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 2,
             ),
             Row(
               children: [
                 Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         top: 10, bottom: 10, left: 10, right: 10),
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12)),
@@ -103,16 +104,16 @@ class DashboadPage extends StatelessWidget {
                           height: 20,
                           width: 20,
                         ),
-                        Text("Pay In",
+                        const Text("Pay In",
                             style: TextStyle(
                               color: Color.fromARGB(255, 12, 86, 109),
                             ))
                       ],
                     )),
                 Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         top: 10, bottom: 10, left: 20, right: 20),
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12)),
@@ -123,16 +124,16 @@ class DashboadPage extends StatelessWidget {
                           height: 20,
                           width: 20,
                         ),
-                        Text("Cash out",
+                        const Text("Cash out",
                             style: TextStyle(
                               color: Color.fromARGB(255, 12, 86, 109),
                             ))
                       ],
                     )),
                 Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         top: 10, bottom: 10, left: 20, right: 20),
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12)),
@@ -143,7 +144,7 @@ class DashboadPage extends StatelessWidget {
                           height: 20,
                           width: 20,
                         ),
-                        Text("Track orders",
+                        const Text("Track orders",
                             style: TextStyle(
                               color: Color.fromARGB(255, 12, 86, 109),
                               fontSize: 10,
@@ -151,9 +152,9 @@ class DashboadPage extends StatelessWidget {
                       ],
                     )),
                 Container(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                         top: 10, bottom: 10, left: 20, right: 20),
-                    margin: EdgeInsets.all(10.0),
+                    margin: const EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12)),
@@ -164,7 +165,7 @@ class DashboadPage extends StatelessWidget {
                           height: 20,
                           width: 20,
                         ),
-                        Text("Shop",
+                        const Text("Shop",
                             style: TextStyle(
                               color: Color.fromARGB(255, 12, 86, 109),
                             ))
@@ -172,11 +173,11 @@ class DashboadPage extends StatelessWidget {
                     ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 250.0),
+            const Padding(
+              padding: EdgeInsets.only(right: 250.0),
               child: Text(
                 "Item Category",
                 style: TextStyle(),
@@ -184,7 +185,7 @@ class DashboadPage extends StatelessWidget {
             ),
             Container(
               color: Colors.white,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -192,11 +193,11 @@ class DashboadPage extends StatelessWidget {
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 30, bottom: 10, left: 20, right: 20),
-                          margin: EdgeInsets.all(10.0),
+                          margin: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 27, 82, 99),
+                              color: const Color.fromARGB(255, 27, 82, 99),
                               borderRadius: BorderRadius.circular(12)),
                           child: Image.asset(
                             "assets/mercedes.png",
@@ -204,17 +205,17 @@ class DashboadPage extends StatelessWidget {
                             width: 50,
                           ),
                         ),
-                        Text("Car"),
+                        const Text("Car"),
                       ],
                     ),
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 30, bottom: 10, left: 20, right: 20),
-                          margin: EdgeInsets.all(10.0),
+                          margin: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 27, 82, 99),
+                              color: const Color.fromARGB(255, 27, 82, 99),
                               borderRadius: BorderRadius.circular(12)),
                           child: Image.asset(
                             "assets/phone.png",
@@ -222,17 +223,17 @@ class DashboadPage extends StatelessWidget {
                             width: 50,
                           ),
                         ),
-                        Text("Electronics"),
+                        const Text("Electronics"),
                       ],
                     ),
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 30, bottom: 10, left: 20, right: 20),
-                          margin: EdgeInsets.all(10.0),
+                          margin: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 27, 82, 99),
+                              color: const Color.fromARGB(255, 27, 82, 99),
                               borderRadius: BorderRadius.circular(12)),
                           child: Image.asset(
                             "assets/dog.png",
@@ -240,17 +241,17 @@ class DashboadPage extends StatelessWidget {
                             width: 50,
                           ),
                         ),
-                        Text("Animal"),
+                        const Text("Animal"),
                       ],
                     ),
                     Column(
                       children: [
                         Container(
-                          padding: EdgeInsets.only(
+                          padding: const EdgeInsets.only(
                               top: 30, bottom: 10, left: 20, right: 20),
-                          margin: EdgeInsets.all(10.0),
+                          margin: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 27, 82, 99),
+                              color: const Color.fromARGB(255, 27, 82, 99),
                               borderRadius: BorderRadius.circular(12)),
                           child: Image.asset(
                             "assets/House.png",
@@ -258,18 +259,18 @@ class DashboadPage extends StatelessWidget {
                             width: 50,
                           ),
                         ),
-                        Text("Car"),
+                        const Text("Car"),
                       ],
                     ),
                   ],
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 250.0),
+            const Padding(
+              padding: EdgeInsets.only(right: 250.0),
               child: Text(
                 "Item Category",
                 style: TextStyle(),

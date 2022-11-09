@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/SellerApp/seller_dashboad_page.dart';
+import 'package:new_app/Buyer%20App/dashboad_page.dart';
 
-class TermsAndConditionPage extends StatelessWidget {
-  const TermsAndConditionPage({super.key});
+class BuyerTermsAndConditionPage extends StatelessWidget {
+  const BuyerTermsAndConditionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class TermsAndConditionPage extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const SellerDashboad()));
+                            const DashboadPage()));
                   },
                   child: Container(
                       padding: const EdgeInsets.all(20),

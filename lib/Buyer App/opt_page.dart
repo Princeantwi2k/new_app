@@ -23,63 +23,59 @@ class OptPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 50,
-                      bottom: 10.0,
-                    ),
-                    child: Image.asset(
-                      'assets/piclogo.png',
-                      width: 220,
-                      height: 130,
-                      fit: BoxFit.cover,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 50,
+                    bottom: 10.0,
+                  ),
+                  child: Image.asset(
+                    'assets/piclogo.png',
+                    width: 220,
+                    height: 130,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Container(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    bottom: 10.0,
-                  ),
-                  child: Image.asset(
-                    'assets/opt.png',
-                    width: 90,
-                    height: 100,
-                    fit: BoxFit.cover,
-                  ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 10,
+                  bottom: 10.0,
+                ),
+                child: Image.asset(
+                  'assets/opt.png',
+                  width: 90,
+                  height: 100,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 280),
+            const Padding(
+              padding: EdgeInsets.only(right: 280),
               child: Text(" OTP",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 50, right: 50),
+            const Padding(
+              padding: EdgeInsets.only(left: 50, right: 50),
               child: Text(
                   " you need to enter a 4 digit code we sent via Provided email",
                   style:
                       TextStyle(fontWeight: FontWeight.normal, fontSize: 17)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
@@ -87,43 +83,43 @@ class OptPage extends StatelessWidget {
                 Flexible(
                     child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(20.0),
-                  margin: EdgeInsets.all(20.0),
-                  child: TextField(
+                  padding: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(20.0),
+                  child: const TextField(
                       decoration: InputDecoration(hintText: "0"),
                       keyboardType: TextInputType.number),
                 )),
                 Flexible(
                     child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(20.0),
-                  margin: EdgeInsets.all(20.0),
-                  child: TextField(
+                  padding: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(20.0),
+                  child: const TextField(
                       decoration: InputDecoration(hintText: "0"),
                       keyboardType: TextInputType.number),
                 )),
                 Flexible(
                     child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(20.0),
-                  margin: EdgeInsets.all(20.0),
-                  child: TextField(
+                  padding: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(20.0),
+                  child: const TextField(
                       decoration: InputDecoration(hintText: "0"),
                       keyboardType: TextInputType.number),
                 )),
                 Flexible(
                     child: Container(
                   color: Colors.white,
-                  padding: EdgeInsets.all(20.0),
-                  margin: EdgeInsets.all(20.0),
-                  child: TextField(
+                  padding: const EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(20.0),
+                  child: const TextField(
                     decoration: InputDecoration(hintText: "0"),
                     keyboardType: TextInputType.number,
                   ),
                 )),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Padding(
@@ -131,14 +127,14 @@ class OptPage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => DashboadPage()));
+                      builder: (BuildContext context) => const DashboadPage()));
                 },
                 child: Container(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 148, 203, 219),
+                        color: const Color.fromARGB(255, 148, 203, 219),
                         borderRadius: BorderRadius.circular(12)),
-                    child: Center(
+                    child: const Center(
                         child: Text(
                       "Sign In",
                       style: TextStyle(
