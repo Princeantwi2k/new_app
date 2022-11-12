@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/Buyer%20App/create_account_page.dart';
+import 'package:new_app/terms_page.dart';
 
-class SellerRegisterPage extends StatelessWidget {
-  const SellerRegisterPage({super.key});
+class NextRegisterPage extends StatelessWidget {
+  const NextRegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 238, 247, 252),
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Center(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        backgroundColor: const Color.fromARGB(255, 238, 247, 252),
+        body: SingleChildScrollView(
+            child: SafeArea(
+                child: Center(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
               //Hello again
               Image.asset(
                 'assets/piclogo.png',
@@ -21,10 +21,11 @@ class SellerRegisterPage extends StatelessWidget {
                 height: 150,
                 fit: BoxFit.cover,
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 200.0),
+              const Padding(
+                padding: EdgeInsets.only(right: 200.0),
                 child: Text("Create Account",
-                    style: GoogleFonts.bebasNeue(fontSize: 24)),
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
               ),
               const SizedBox(
                 height: 10,
@@ -36,16 +37,12 @@ class SellerRegisterPage extends StatelessWidget {
                         TextStyle(fontWeight: FontWeight.normal, fontSize: 17)),
               ),
               const SizedBox(
-                height: 25,
+                height: 40,
               ),
-              //email testfild
-
-              const SizedBox(
-                height: 10,
-              ),
-              //password testfild
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
                 child: Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -57,54 +54,46 @@ class SellerRegisterPage extends StatelessWidget {
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "Enter your email",
+                        hintText: "Enter Password",
                       ),
                     ),
                   ),
                 ),
               ),
               const SizedBox(
-                height: 10,
-              ),
-              const Text("By opening an account you agree to our"),
-              Center(
-                  child: Text(
-                "Term of Use",
-                style: GoogleFonts.bebasNeue(fontSize: 13, color: Colors.red),
-              )),
-              const SizedBox(
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30.0),
-                child: GestureDetector(
-                  child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          border: Border.all(
-                              color: const Color.fromARGB(255, 226, 4, 4)),
-                          borderRadius: BorderRadius.circular(12)),
-                      child: const Center(
-                          child: Text(
-                        "Use Phone",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 18),
-                      ))),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 25.0,
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 20.0, top: 8, bottom: 8),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Confirm password",
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(
-                height: 25,
+                height: 50,
               ),
-
-              //sign in button
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            const CreateAccount()));
+                            const TermsAndConditions()));
                   },
                   child: Container(
                       padding: const EdgeInsets.all(20),
@@ -113,7 +102,7 @@ class SellerRegisterPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: const Center(
                           child: Text(
-                        "Confirm",
+                        "Complete",
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -122,11 +111,8 @@ class SellerRegisterPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 25,
+                height: 80,
               ),
-
-              //not a member? register now
-
               Padding(
                 padding: const EdgeInsets.only(left: 90),
                 child: Row(
@@ -146,10 +132,6 @@ class SellerRegisterPage extends StatelessWidget {
                   ],
                 ),
               )
-            ]),
-          ),
-        ),
-      ),
-    );
+            ])))));
   }
 }

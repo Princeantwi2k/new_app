@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/SellerApp/seller_otp_page.dart';
-import 'package:new_app/Buyer%20App/register_page.dart';
+import 'package:new_app/seller_otp_page.dart';
+
+import 'seller_register_page.dart';
 
 class SellersLoginPage extends StatelessWidget {
   const SellersLoginPage({

@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/SellerApp/seller_dashboad_page.dart';
+import 'package:new_app/seller_dashboad_page.dart';
 
-class TermsAndConditionPage extends StatelessWidget {
-  const TermsAndConditionPage({super.key});
+class TermsAndConditions extends StatefulWidget {
+  const TermsAndConditions({super.key});
+
+  @override
+  State<TermsAndConditions> createState() => _TermsAndConditionsState();
+}
+
+class _TermsAndConditionsState extends State<TermsAndConditions> {
+  bool? _checkBox = false;
+  bool? _agreedBox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +56,16 @@ class TermsAndConditionPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Checkbox(value: true, onChanged: (bool? value) {}),
+                  Checkbox(
+                      tristate: true,
+                      checkColor: Colors.white,
+                      activeColor: const Color(0xff3f6b65),
+                      value: _agreedBox,
+                      onChanged: (val) {
+                        setState(() {
+                          _agreedBox = val;
+                        });
+                      }),
                   const Text("I accept all Terms & conditions")
                 ],
               ),
@@ -57,7 +74,16 @@ class TermsAndConditionPage extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Checkbox(value: true, onChanged: (bool? value) {}),
+                  Checkbox(
+                      tristate: true,
+                      checkColor: Colors.white,
+                      activeColor: const Color(0xff3f6b65),
+                      value: _checkBox,
+                      onChanged: (val) {
+                        setState(() {
+                          _checkBox = val;
+                        });
+                      }),
                   const Text("I accept user fee")
                 ],
               ),

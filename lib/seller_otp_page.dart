@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/Buyer%20App/dashboad_page.dart';
 
-class OptPage extends StatelessWidget {
-  const OptPage({super.key});
+import 'seller_dashboad_page.dart';
+
+class SellerOptPage extends StatelessWidget {
+  const SellerOptPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,14 +14,12 @@ class OptPage extends StatelessWidget {
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             Row(
               children: [
-                Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(bottom: 10.0, left: 15),
-                    child: Image.asset(
-                      'assets/left-arrow-1.png',
-                      width: 20,
-                      height: 100,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10.0, left: 15),
+                  child: Image.asset(
+                    'assets/left-arrow-1.png',
+                    width: 20,
+                    height: 100,
                   ),
                 ),
                 Padding(
@@ -127,7 +126,8 @@ class OptPage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => const DashboadPage()));
+                      builder: (BuildContext context) =>
+                          const SellerDashboad()));
                 },
                 child: Container(
                     padding: const EdgeInsets.all(20),

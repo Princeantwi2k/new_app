@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/Buyer%20App/backgroud.dart';
-import 'package:new_app/SellerApp/seller_register_page.dart';
-import 'login_page.dart';
+import 'package:new_app/seller_backgroud.dart';
 
-class IndexPage extends StatelessWidget {
-  const IndexPage({super.key});
+import 'seller_login_page.dart';
+import 'seller_register_page.dart';
+
+class SellerIndexPage extends StatelessWidget {
+  const SellerIndexPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Background(),
+      const SellerBackground(),
       Scaffold(
           backgroundColor: Colors.transparent,
           body: SafeArea(
@@ -37,7 +38,7 @@ class IndexPage extends StatelessWidget {
                       height: 10,
                     ),
 
-                    const Text("Buyer App",
+                    const Text("Sellers App",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
@@ -71,7 +72,7 @@ class IndexPage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const LoginPage()));
+                                  const SellersLoginPage()));
                         },
                         child: Container(
                             padding: const EdgeInsets.all(20),
@@ -98,7 +99,7 @@ class IndexPage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SellerRegisterPage()));
+                                  const RegisterPage()));
                         },
                         child: Container(
                             padding: const EdgeInsets.all(20),

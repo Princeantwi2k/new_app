@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/SellerApp/seller_welcome_page.dart';
+import 'package:new_app/seller_welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
