@@ -77,7 +77,7 @@ class _SellerWelcomePageState extends State<SellerWelcomePage> {
                 ],
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 margin: const EdgeInsets.only(right: 50, left: 50),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.white),
@@ -93,7 +93,7 @@ class _SellerWelcomePageState extends State<SellerWelcomePage> {
                     });
                   },
                   icon: const Icon(
-                    Icons.arrow_drop_down_circle,
+                    Icons.keyboard_arrow_down,
                     color: Colors.white,
                   ),
                   dropdownColor: Colors.white,

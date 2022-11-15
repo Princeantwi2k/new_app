@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:new_app/add_item_page.dart';
 
 class SellerDashboad extends StatefulWidget {
   const SellerDashboad({super.key});
@@ -42,52 +43,68 @@ class _SellerDashboadState extends State<SellerDashboad> {
           const NavigationDestination(
               icon: Icon(Icons.shopping_cart), label: "cart"),
         ]),
+        appBar: AppBar(
+          backgroundColor: Colors.grey[200],
+          leading: Container(
+            margin: const EdgeInsets.all(10),
+            child: const CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/profile.jpg',
+                ),
+                radius: 20),
+          ),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 10, right: 60),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(right: 80),
+                  child: const Text("Hello",
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 15,
+                          color: Colors.black)),
+                ),
+                const Text("Ann Onwuegbuchi",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.black)),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(10.0),
+                  margin: const EdgeInsets.only(
+                      right: 30, top: 10, bottom: 10, left: 0),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12)),
+                  child: Image.asset(
+                    'assets/Group 402.png',
+                    width: 20,
+                    height: 20,
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
         body: SingleChildScrollView(
             child: SafeArea(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-              Row(
-                children: [
-                  const CircleAvatar(
-                      backgroundImage: AssetImage(
-                        'assets/profile.jpg',
-                      ),
-                      radius: 30),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 60),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.only(right: 100),
-                          child: const Text("Hello",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.normal, fontSize: 15)),
-                        ),
-                        const Text("Ann Onwuegbuchi",
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16)),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(15.0),
-                    margin: const EdgeInsets.all(20.0),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(12)),
-                    child: Image.asset(
-                      'assets/Group 402.png',
-                      width: 20,
-                      height: 20,
-                    ),
-                  ),
-                ],
+              const SizedBox(
+                height: 10,
               ),
               CarouselSlider(
                 options: CarouselOptions(
-                    height: 200.0, autoPlay: true, viewportFraction: 0.9),
+                    height: 200.0, autoPlay: true, viewportFraction: 1),
                 items: [
                   "assets/banner.png",
                   "assets/banner 2.png",
@@ -127,29 +144,36 @@ class _SellerDashboadState extends State<SellerDashboad> {
                     children: [
                       Column(
                         children: [
-                          Container(
-                            padding: const EdgeInsets.only(
-                                top: 20, bottom: 10, left: 15, right: 15),
-                            margin: const EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                                gradient: const LinearGradient(
-                                    colors: [
-                                      Color.fromARGB(255, 95, 167, 163),
-                                      Color(0xff3f6b65),
-                                      Color(0xff3f6b65),
-                                    ],
-                                    stops: [
-                                      0.2,
-                                      0.9,
-                                      0.2
-                                    ],
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.centerRight),
-                                borderRadius: BorderRadius.circular(12)),
-                            child: Image.asset(
-                              "assets/basket.png",
-                              height: 40,
-                              width: 50,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      const AddItem()));
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.only(
+                                  top: 20, bottom: 10, left: 15, right: 15),
+                              margin: const EdgeInsets.all(10.0),
+                              decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                      colors: [
+                                        Color.fromARGB(255, 95, 167, 163),
+                                        Color(0xff3f6b65),
+                                        Color(0xff3f6b65),
+                                      ],
+                                      stops: [
+                                        0.2,
+                                        0.9,
+                                        0.2
+                                      ],
+                                      begin: Alignment.topLeft,
+                                      end: Alignment.centerRight),
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: Image.asset(
+                                "assets/basket.png",
+                                height: 40,
+                                width: 50,
+                              ),
                             ),
                           ),
                           const Text("Add iterm"),
@@ -250,7 +274,7 @@ class _SellerDashboadState extends State<SellerDashboad> {
                       trailing: Column(
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             child: Text(productStatus[index]),
                           ),
                           Container(

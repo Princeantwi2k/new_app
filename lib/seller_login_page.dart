@@ -21,10 +21,15 @@ class SellersLoginPage extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10.0, left: 15),
-                    child: Image.asset(
-                      'assets/left-arrow-1.png',
-                      width: 20,
-                      height: 100,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Image.asset(
+                        'assets/left-arrow-1.png',
+                        width: 20,
+                        height: 100,
+                      ),
                     ),
                   ),
                   Padding(

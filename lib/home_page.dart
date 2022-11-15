@@ -11,7 +11,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color.fromARGB(33, 22, 33, 43),
         title: const Text("Bagain"),
       ),
-      body: Center(child: Column()),
+      body: Center(
+          child: Column(
+        children: [],
+      )),
     );
   }
 }
