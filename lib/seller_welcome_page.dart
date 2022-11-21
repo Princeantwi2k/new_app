@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'seller_index_page.dart';
+import 'Logins/seller_index_page.dart';
 
 class SellerWelcomePage extends StatefulWidget {
   const SellerWelcomePage({super.key});

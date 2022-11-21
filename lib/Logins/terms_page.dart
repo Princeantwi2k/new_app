@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/seller_dashboad_page.dart';
+import 'package:new_app/Screens/seller_dashboad_page.dart';
+import 'package:new_app/Screens/seller_root_page.dart';
 
 class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({super.key});
@@ -95,8 +96,7 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const SellerDashboad()));
+                        builder: (BuildContext context) => const RootPage()));
                   },
                   child: Container(
                       padding: const EdgeInsets.all(20),

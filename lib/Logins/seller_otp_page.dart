@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:new_app/Screens/seller_root_page.dart';
 
-import 'seller_dashboad_page.dart';
+import '../Screens/seller_dashboad_page.dart';
 
 class SellerOptPage extends StatelessWidget {
   const SellerOptPage({super.key});
@@ -17,9 +18,9 @@ class SellerOptPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10.0, left: 15),
                   child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Image.asset(
                       'assets/left-arrow-1.png',
                       width: 20,
@@ -131,8 +132,7 @@ class SellerOptPage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) =>
-                          const SellerDashboad()));
+                      builder: (BuildContext context) => const RootPage()));
                 },
                 child: Container(
                     padding: const EdgeInsets.all(20),

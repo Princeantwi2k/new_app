@@ -69,15 +69,6 @@ class _AddNextPageState extends State<AddNextPage> {
         ],
       ),
       backgroundColor: Colors.grey[200],
-      bottomNavigationBar:
-          // ignore: prefer_const_literals_to_create_immutables
-          NavigationBar(backgroundColor: Colors.white, destinations: [
-        const NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-        const NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-        const NavigationDestination(icon: Icon(Icons.search), label: "search"),
-        const NavigationDestination(
-            icon: Icon(Icons.shopping_cart), label: "cart"),
-      ]),
       body: SingleChildScrollView(
         child: Container(
           margin:

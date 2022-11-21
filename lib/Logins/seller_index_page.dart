@@ -121,20 +121,6 @@ class SellerIndexPage extends StatelessWidget {
                     ),
 
                     //not a member? register now
-
-                    Padding(
-                      padding: const EdgeInsets.only(left: 150),
-                      child: Row(
-                        // ignore: prefer_const_literals_to_create_immutables
-                        children: [
-                          const Text("Enter on Vistor ",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 17,
-                                  color: Colors.orange)),
-                        ],
-                      ),
-                    )
                   ]),
             ),
           ))

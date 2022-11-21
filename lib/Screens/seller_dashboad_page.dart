@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/add_item_page.dart';
+import 'package:new_app/AddItem/add_item_page.dart';
 
 class SellerDashboad extends StatefulWidget {
   const SellerDashboad({super.key});
@@ -32,17 +32,6 @@ class _SellerDashboadState extends State<SellerDashboad> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        bottomNavigationBar:
-            // ignore: prefer_const_literals_to_create_immutables
-            NavigationBar(backgroundColor: Colors.white, destinations: [
-          const NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-          const NavigationDestination(
-              icon: Icon(Icons.person), label: "Person"),
-          const NavigationDestination(
-              icon: Icon(Icons.search), label: "search"),
-          const NavigationDestination(
-              icon: Icon(Icons.shopping_cart), label: "cart"),
-        ]),
         appBar: AppBar(
           backgroundColor: Colors.grey[200],
           leading: Container(

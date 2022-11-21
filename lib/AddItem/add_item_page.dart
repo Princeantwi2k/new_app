@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:new_app/add_next_page.dart';
+import 'package:new_app/AddItem/add_next_page.dart';
 
 class AddItem extends StatefulWidget {
   const AddItem({super.key});
@@ -14,15 +14,6 @@ class _AddItemState extends State<AddItem> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      bottomNavigationBar:
-          // ignore: prefer_const_literals_to_create_immutables
-          NavigationBar(backgroundColor: Colors.white, destinations: [
-        const NavigationDestination(icon: Icon(Icons.home), label: "Home"),
-        const NavigationDestination(icon: Icon(Icons.person), label: "Person"),
-        const NavigationDestination(icon: Icon(Icons.search), label: "search"),
-        const NavigationDestination(
-            icon: Icon(Icons.shopping_cart), label: "cart"),
-      ]),
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
         leading: GestureDetector(
